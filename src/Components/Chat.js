@@ -22,7 +22,8 @@ function Chat() {
   const [selectedUser, setSelectedUser] = useState(null);
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
+};
+function Chat() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
@@ -30,7 +31,8 @@ function Chat() {
     });
     return () => unsubscribe();
   }, []);
-
+};
+function Chat() {
   useEffect(() => {
     if (!currentUser) return;
     const userUid = currentUser.uid;
@@ -38,7 +40,8 @@ function Chat() {
       collection(db, "chats"),
       where("participants", "array-contains", userUid)
     );
-
+  };
+  function Chat() {
     const unsubscribe = onSnapshot(q, (snapshot) => {
       let chats = [];
       snapshot.forEach((doc) => {
@@ -56,7 +59,7 @@ function Chat() {
       });
       setChats(chats);
     });
-
+  };
     return () => unsubscribe();
   }, [currentUser, users]);
 
