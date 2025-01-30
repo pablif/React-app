@@ -5,4 +5,3 @@ He establecido 2 badges para comprobar de manera visual si pasa tanto la "Qualit
 
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=pablif_React-app&metric=coverage)](https://sonarcloud.io/summary/new_code?id=pablif_React-app)
 
-
